@@ -11,8 +11,9 @@ const Navbar = ({ user, navigate, currentRouteName, onLogout }) => {
             e.preventDefault();
             navigate('home');
           }}
+          style={{ fontSize: '1.25rem', whiteSpace: 'nowrap' }}
         >
-          RSR<span>Feedback</span>
+          RSR <span style={{ fontSize: '1rem', fontWeight: '400', letterSpacing: '0.05em' }}>ENGINEERING COLLEGE</span>
         </a>
         
         <nav className="navbar-links">

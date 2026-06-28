@@ -80,7 +80,7 @@ function App() {
         borderTop: '1px solid var(--border-color)',
         marginTop: 'auto'
       }}>
-        <p>© 2026 RSR Feedback. Built with Python (FastAPI), SQLite, and React.</p>
+        <p>© 2026 RSR Engineering College. Built with Python (FastAPI), SQLite, and React.</p>
       </footer>
     </div>
   );

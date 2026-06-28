@@ -48,7 +48,7 @@ const Home = ({ navigate, user }) => {
   return (
     <div>
       <section className="hero" style={{ padding: '2rem 1rem 3rem' }}>
-        <h1 className="hero-title">RSR Feedback System</h1>
+        <h1 className="hero-title">RSR Engineering College</h1>
         <p className="hero-subtitle">
           Voice your feedback, track academic & facility reviews, and browse department responses.
         </p>

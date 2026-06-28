@@ -652,3 +652,34 @@ textarea.form-control {
     align-items: flex-start;
   }
 }
+
+/* Smooth Scrolling & Animations */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-card {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Stagger animations for feedback grid cards */
+.posts-grid > *:nth-child(1) { animation-delay: 0.05s; }
+.posts-grid > *:nth-child(2) { animation-delay: 0.1s; }
+.posts-grid > *:nth-child(3) { animation-delay: 0.15s; }
+.posts-grid > *:nth-child(4) { animation-delay: 0.2s; }
+.posts-grid > *:nth-child(5) { animation-delay: 0.25s; }
+.posts-grid > *:nth-child(6) { animation-delay: 0.3s; }
+.posts-grid > *:nth-child(7) { animation-delay: 0.35s; }
+.posts-grid > *:nth-child(8) { animation-delay: 0.4s; }
+
