@@ -12,7 +12,7 @@ def dict_factory(cursor, row):
 
 def get_db_connection():
     """Establish a connection to the SQLite database with dict output and foreign keys enabled."""
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
     conn.row_factory = dict_factory
     conn.execute("PRAGMA foreign_keys = ON;")
     return conn
