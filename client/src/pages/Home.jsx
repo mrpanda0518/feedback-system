@@ -45,13 +45,6 @@ const Home = ({ navigate, user }) => {
     return matchesSearch && matchesCategory && matchesDept;
   });
 
-  const handleScrollDown = () => {
-    const target = document.getElementById('feedbacks-section');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div>
       <section className="hero" style={{ padding: '2rem 1rem 3rem' }}>
@@ -77,17 +70,10 @@ const Home = ({ navigate, user }) => {
             </button>
           )}
         </div>
-
-        <div className="scroll-down-indicator" onClick={handleScrollDown}>
-          <span style={{ fontSize: '0.8rem', fontWeight: '500', opacity: 0.8 }}>Scroll Down</span>
-          <div className="mouse-icon">
-            <div className="mouse-wheel"></div>
-          </div>
-        </div>
       </section>
 
       {/* Tabs */}
-      <div id="feedbacks-section" style={{ 
+      <div style={{ 
         display: 'flex', 
         justifyContent: 'center', 
         gap: '1rem', 

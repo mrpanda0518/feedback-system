@@ -36,15 +36,16 @@
 }
 
 body {
-  background-color: var(--bg-base);
+  background-color: #070913;
   color: var(--text-main);
   font-family: var(--font-sans);
   min-height: 100vh;
   line-height: 1.6;
   overflow-x: hidden;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 40%);
+    radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(236, 72, 153, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 60%, rgba(99, 102, 241, 0.04) 0%, transparent 50%);
   background-attachment: fixed;
 }
 
@@ -215,21 +216,21 @@ a {
 
 /* Glass Cards */
 .card {
-  background: var(--bg-surface);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
+  background: rgba(20, 26, 46, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
-  box-shadow: var(--shadow-glass);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
   transition: var(--transition-smooth);
 }
 
 .card-hover:hover {
   transform: translateY(-4px);
-  border-color: var(--border-color-hover);
-  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(99, 102, 241, 0.1);
-  background: var(--bg-surface-hover);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.45), 0 0 30px 0 rgba(99, 102, 241, 0.15);
+  background: rgba(30, 38, 66, 0.65);
 }
 
 /* Form Styles */
@@ -247,10 +248,10 @@ a {
 }
 
 .form-control {
-  background: var(--bg-input);
-  border: 1px solid var(--border-color);
+  background: rgba(9, 11, 23, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  padding: 0.75rem 1rem;
+  padding: 0.8rem 1.1rem;
   font-family: var(--font-sans);
   font-size: 0.95rem;
   color: var(--text-main);
@@ -260,8 +261,9 @@ a {
 
 .form-control:focus {
   outline: none;
-  border-color: var(--border-focus);
-  box-shadow: 0 0 10px var(--color-primary-glow);
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+  background: rgba(9, 11, 23, 0.8);
 }
 
 textarea.form-control {
@@ -683,52 +685,6 @@ html {
 .posts-grid > *:nth-child(7) { animation-delay: 0.35s; }
 .posts-grid > *:nth-child(8) { animation-delay: 0.4s; }
 
-/* Mouse Scroll Down Indicator */
-.scroll-down-indicator {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: var(--transition-smooth);
-}
-
-.scroll-down-indicator:hover {
-  color: var(--text-main);
-  transform: translateY(2px);
-}
-
-.mouse-icon {
-  width: 22px;
-  height: 36px;
-  border: 2px solid currentColor;
-  border-radius: 12px;
-  position: relative;
-}
-
-.mouse-wheel {
-  width: 4px;
-  height: 8px;
-  background-color: var(--color-primary);
-  border-radius: 2px;
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: scrollWheel 1.6s ease-in-out infinite;
-}
-
-@keyframes scrollWheel {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, 12px);
-  }
-}
+/* Mouse Scroll Down Indicator removed */
 
 
